@@ -1,0 +1,333 @@
+TRADITIONAL CI/CD RESEARCH LOG
+======================================
+
+RUN #1 - 2025-08-02 15:11
+-------------------------
+Scenario: Baseline successful pipeline
+Environment: staging
+Failure Simulation: none
+
+Manual Approvals:
+  - Code Review: 3 minutes
+  - Security Review: 1 minutes
+  - Total Manual Time: 4 minutes
+
+Pipeline Metrics:
+  - Total Duration: 290 seconds
+  - Status: SUCCESS
+  - Manual Interventions: 2 (Code Review, Security)
+  - Automation Level: 60% (Build/Test/Deploy automated, Approvals manual)
+
+Research Notes:
+First baseline run completed successfully. Fast manual approvals (4 minutes total) demonstrate efficient human intervention scenario. Rolling update worked perfectly with new optimization. Service deployed correctly and responding normally. No technical issues observed during pipeline execution.
+
+Research Objective:
+Establish baseline Traditional CI/CD performance metrics with fast human intervention pattern for thesis comparison against GitOps methodology.
+
+
+Data Sources:
+  - Grafana: http://34.95.17.28:3000
+  - Prometheus: http://34.152.31.190:9090
+  - GitHub Run ID: 45
+
+======================================
+
+
+TRADITIONAL CI/CD RESEARCH LOG
+======================================
+
+RUN #2 - 2025-08-02 15:20
+-------------------------
+Scenario: Extended approval delays
+Environment: staging
+Failure Simulation: none
+
+Manual Approvals:
+  - Code Review: 3 minutes
+  - Security Review: 6 minutes
+  - Total Manual Time: 9 minutes
+
+Pipeline Metrics:
+  - Total Duration: 538 seconds
+  - Status: SUCCESS
+  - Manual Interventions: 2 (Code Review, Security)
+  - Automation Level: 60% (Build/Test/Deploy automated, Approvals manual)
+
+Research Notes:
+Mixed approval pattern test - demonstrates realistic human behavior variance. Code review approved quickly (3 min), security review with typical organizational delay (5 min). This creates a realistic baseline showing human intervention variability in Traditional CI/CD workflows.
+
+Research Objective:
+Capture realistic human approval timing variance as baseline for Traditional CI/CD performance comparison. Mixed approval delays demonstrate typical organizational workflow patterns.
+
+Data Sources:
+  - Grafana: http://34.95.17.28:3000
+  - Prometheus: http://34.152.31.190:9090
+  - GitHub Run ID: 46
+
+======================================
+
+TRADITIONAL CI/CD RESEARCH LOG
+======================================
+
+RUN #3 - 2025-08-02 18:59
+-------------------------
+Scenario: Fast approval testing
+Environment: staging
+Failure Simulation: none
+
+Pipeline Timing:
+  - Started at: 18:53
+  - Code Review approved at: 18:56 (3 min wait)
+  - Security Review approved at: 18:57 (1 min wait)
+  - Total Manual Time: 4 minutes
+
+Pipeline Metrics:
+  - Total Duration: 294 seconds
+  - Status: SUCCESS
+  - Manual Interventions: 2 (Code Review, Security)
+  - Automation Level: 60% (Build/Test/Deploy automated, Approvals manual)
+
+Research Notes:
+Repeating fast approval scenario test (RUN #3 data was lost due to metrics push errors). Testing immediate approval response to establish minimum human intervention baseline for Traditional CI/CD. Both approvals will be processed within 10-30 seconds to measure optimal pipeline performance with minimal manual delays.
+
+Research Objective:
+Re-establish minimum viable manual intervention timing baseline for Traditional CI/CD workflows. Measure optimal performance when human approvals are processed immediately to complete the performance spectrum analysis (fast/medium/extended delays).
+
+Data Sources:
+  - Grafana: http://34.95.17.28:3000
+  - Prometheus: http://34.152.31.190:9090
+  - GitHub Run ID: 53
+
+======================================
+TRADITIONAL CI/CD RESEARCH LOG
+======================================
+
+RUN #4 - 2025-08-02 19:11
+-------------------------
+Scenario: Build failure simulation
+Environment: staging
+Failure Simulation: build_failure
+
+Pipeline Timing:
+  - Started at: 19:07
+  - Failed at: 19:10 (Build & Test stage)
+  - No approvals reached (pipeline terminated early)
+  - Total Manual Time: 0 minutes
+
+Pipeline Metrics:
+  - Total Duration: 183 seconds
+  - Status: FAILED
+  - Manual Interventions: 0 (Failed before approvals)
+  - Automation Level: 60% (Build/Test/Deploy automated, Approvals manual)
+
+Research Notes:
+Testing Traditional CI/CD failure detection and early pipeline termination. This simulation measures how quickly the pipeline identifies build failures, terminates execution to prevent resource waste, and provides developer feedback. The failure occurs during the build stage (after source analysis but before manual approvals), demonstrating the automated failure detection capabilities inherent in Traditional CI/CD workflows.
+
+Research Objective:
+Quantify Traditional CI/CD failure handling efficiency: (1) Time-to-failure detection speed, (2) Resource consumption of failed vs successful pipelines, (3) Pipeline termination effectiveness. This data establishes baseline failure recovery performance for comparison with GitOps failure handling mechanisms. Critical for understanding how each methodology handles build failures and prevents unnecessary manual intervention cycles.
+
+Data Sources:
+  - Grafana: http://34.95.17.28:3000
+  - Prometheus: http://34.152.31.190:9090
+  - GitHub Run ID: 54
+
+======================================
+
+TRADITIONAL CI/CD RESEARCH LOG
+======================================
+
+RUN #5 - 2025-08-02 19:31
+-------------------------
+Scenario: Extended approval delays
+Environment: staging
+Failure Simulation: none
+
+Pipeline Timing:
+  - Started at: 19:16
+  - Code Review approved at: 19:24 (8 min wait)
+  - Security Review approved at: 19:30 (6 min wait)
+  - Total Manual Time: 14 minutes
+
+Pipeline Metrics:
+  - Total Duration: 847 seconds
+  - Status: SUCCESS
+  - Manual Interventions: 2 (Code Review, Security)
+  - Automation Level: 60% (Build/Test/Deploy automated, Approvals manual)
+
+Research Notes:
+Re-testing extended manual approval delays with 8-12 minute wait times at both approval gates. Validates human bottleneck impact and establishes upper performance boundary for Traditional CI/CD workflows.
+
+Research Objective:
+Quantify maximum Traditional CI/CD delay impact. Target: 500-600s total duration with extended manual interventions. Critical for GitOps comparison baseline.
+
+Data Sources:
+  - Grafana: http://34.95.17.28:3000
+  - Prometheus: http://34.152.31.190:9090
+  - GitHub Run ID: 55
+
+======================================
+
+TRADITIONAL CI/CD RESEARCH LOG
+
+======================================
+
+RUN #6 - 2025-08-02 19:49
+
+-------------------------
+
+Scenario: failure
+
+Environment: staging
+
+Failure Simulation: security_failure
+
+Pipeline Timing:
+
+  - Started at: 19:43
+
+  - Failed at: 19:49 (Security Review stage)
+
+  - No approvals reached (pipeline terminated early)
+
+  - Total Manual Time: 0 minutes
+
+Pipeline Metrics:
+
+  - Total Duration: 320 seconds
+
+  - Status: FAILED
+
+  - Manual Interventions: 0 (Failed before approvals)
+
+  - Automation Level: 60% (Build/Test/Deploy automated, Approvals manual)
+
+Research Notes:
+
+Testing Traditional CI/CD security gate failure handling. Pipeline will terminate at security approval stage after successful build/test phases, demonstrating security validation failure recovery and resource consumption patterns.
+
+Research Objective:
+
+Measure Traditional CI/CD security failure detection and termination efficiency. Compare failure point impact vs build failures - how much additional time/resources consumed when failures occur later in pipeline.
+
+Data Sources:
+
+  - Grafana: http://34.95.17.28:3000
+
+  - Prometheus: http://34.152.31.190:9090
+
+  - GitHub Run ID: 57
+
+======================================
+
+TRADITIONAL CI/CD RESEARCH LOG
+======================================
+RUN #7 - 2025-08-02 19:58
+-------------------------
+Scenario: Deployment failure simulation
+Environment: staging
+Failure Simulation: deployment_failure
+Pipeline Timing:
+  - Started at: 19:51
+  - Failed at: 19:57 (Deployment stage)
+  - No approvals reached (pipeline terminated early)
+  - Total Manual Time: 0 minutes
+Pipeline Metrics:
+  - Total Duration: 330 seconds
+  - Status: FAILED
+  - Manual Interventions: 0 (Failed before approvals)
+  - Automation Level: 60% (Build/Test/Deploy automated, Approvals manual)
+Research Notes:
+Testing Traditional CI/CD deployment failure handling at final stage. Pipeline completes all build/test/approval phases but fails during GKE deployment, measuring maximum resource consumption before failure and late-stage error recovery.
+Research Objective:
+Quantify Traditional CI/CD late-stage failure impact. Measure resource cost when failures occur after all manual approvals (~500-600s). Compare deployment failure recovery vs earlier failure points.
+Data Sources:
+  - Grafana: http://34.95.17.28:3000
+  - Prometheus: http://34.152.31.190:9090
+  - GitHub Run ID: 57
+======================================
+
+TRADITIONAL CI/CD RESEARCH LOG
+======================================
+RUN #8 - 2025-08-02 20:08
+-------------------------
+Scenario: Baseline successful pipeline
+Environment: production
+Failure Simulation: none
+Pipeline Timing:
+  - Started at: 20:02
+  - Code Review approved at: 20:05 (3 min wait)
+  - Security Review approved at: 20:06 (1 min wait)
+  - Production Release approved at: 20:08 (2 min wait)
+  - Total Manual Time: 6 minutes
+Pipeline Metrics:
+  - Total Duration: 350 seconds
+  - Status: SUCCESS
+  - Manual Interventions: 3 (Code Review, Security, Production)
+  - Automation Level: 50% (Build/Test/Deploy automated, Approvals manual)
+Research Notes:
+Testing Traditional CI/CD production environment with 3-gate approval process. Measures impact of additional production approval gate on total pipeline duration and manual intervention overhead compared to 2-gate staging process.
+Research Objective:
+Quantify Traditional CI/CD production overhead. Compare 3-gate vs 2-gate approval impact on pipeline duration. Establish production baseline for GitOps comparison and measure enterprise-grade manual intervention requirements.
+Data Sources:
+  - Grafana: http://34.95.17.28:3000
+  - Prometheus: http://34.152.31.190:9090
+  - GitHub Run ID: 59
+======================================
+
+TRADITIONAL CI/CD RESEARCH LOG
+======================================
+RUN #9 - 2025-08-02 20:21
+-------------------------
+Scenario: Build failure simulation
+Environment: staging
+Failure Simulation: test_failure
+Pipeline Timing:
+  - Started at: 20:17
+  - Failed at: 20:20 (Build & Test stage)
+  - No approvals reached (pipeline terminated early)
+  - Total Manual Time: 0 minutes
+Pipeline Metrics:
+  - Total Duration: 177 seconds
+  - Status: FAILED
+  - Manual Interventions: 0 (Failed before approvals)
+  - Automation Level: 60% (Build/Test/Deploy automated, Approvals manual)
+Research Notes:
+Testing Traditional CI/CD test suite failure handling. Pipeline fails during test execution phase (after build setup but before Docker build), measuring early-stage automated failure detection in testing workflows.
+Research Objective:
+Quantify Traditional CI/CD test failure detection speed vs build failure. Compare resource consumption and failure timing when testing phase fails. Establishes testing failure baseline for GitOps comparison.
+Data Sources:
+  - Grafana: http://34.95.17.28:3000
+  - Prometheus: http://34.152.31.190:9090
+  - GitHub Run ID: 61
+======================================
+
+TRADITIONAL CI/CD RESEARCH LOG
+======================================
+RUN #10 - 2025-08-02 20:58
+-------------------------
+Scenario: Resource constraint testing
+Environment: staging
+Failure Simulation: resource_exhaustion
+Pipeline Timing:
+  - Started at: 20:22
+  - Failed at: 20:29 (Build & Test stage)
+  - No approvals reached (pipeline terminated early)
+  - Total Manual Time: 0 minutes
+Pipeline Metrics:
+  - Total Duration: 420 seconds
+  - Status: FAILED
+  - Manual Interventions: 0 (Failed before approvals)
+  - Automation Level: 60% (Build/Test/Deploy automated, Approvals manual)
+Research Notes:
+Testing Traditional CI/CD test suite failure handling. Pipeline fails during test execution phase (after build setup but before Docker build), measuring early-stage automated failure detection in testing workflows.
+Research Objective:
+Quantify Traditional CI/CD test failure detection speed vs build failure. Compare resource consumption and failure timing when testing phase fails. Establishes testing failure baseline for GitOps comparison.
+Data Sources:
+  - Grafana: http://34.95.17.28:3000
+  - Prometheus: http://34.152.31.190:9090
+  - GitHub Run ID: 61
+======================================
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
